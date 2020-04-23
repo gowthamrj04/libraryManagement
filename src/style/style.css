@@ -1,0 +1,43 @@
+.libraryTable {
+  text-align: center;
+}
+div#library-content {
+  width: 100%;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+div#book {
+  width: 100%;
+  margin-left: 25%;
+}
+
+#libraryTable {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#libraryTable td,
+#libraryTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#libraryTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#libraryTable tr:hover {
+  background-color: #ddd;
+}
+
+#libraryTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+header {
+  width: 100%;
+  text-align: center;
+}

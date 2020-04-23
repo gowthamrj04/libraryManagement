@@ -1,11 +1,20 @@
 import React, { Component } from "react";
-import "../App.css";
 
 class BooksComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      bookData: this.props.bookData,
+    };
   }
+
+  // componentDidUpdate(prevprops) {
+  //   if (prevprops.bookData.length !== this.props.bookData.length) {
+  //     this.setState({
+  //       bookData: this.props.bookData,
+  //     });
+  //   }
+  // }
 
   render() {
     return (
@@ -13,13 +22,14 @@ class BooksComponent extends Component {
         <header>
           <h4>View Books</h4>
         </header>
-        <div className="book">
+        <div id="book">
           <table id="libraryTable" border="1">
             <thead>
               <tr>
-                <th>Id</th>
+                <th>Book Id</th>
                 <th>Book Name</th>
                 <th>Author</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -29,6 +39,14 @@ class BooksComponent extends Component {
                     <td>{book.bookId}</td>
                     <td>{book.bookName}</td>
                     <td>{book.author}</td>
+                    <td>
+                      <button
+                        className="btn btn-danger"
+                        onClick={(e) => this.props.deleteBook(e, book.bookId)}
+                      >
+                        Delete Book
+                      </button>
+                    </td>
                   </tr>
                 );
               })}
